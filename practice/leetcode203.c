@@ -24,4 +24,5 @@ while(current->next!=NULL){
 struct ListNode*newhead=dummy->next;
 free(dummy);
 return newhead;
+//test
 }
