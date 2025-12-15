@@ -6,22 +6,16 @@ typedef struct TreeNode {
     struct TreeNode *right;
 } TreeNode;
 struct TreeNode* lowestCommonAncestor(struct TreeNode* root, struct TreeNode* p, struct TreeNode* q) {
-    
-
-
     if(root==NULL)return NULL;
     if(root==p||root==q)return root;
-    struct TreeNode* left = lowestCommonAncestor(root->left, p, q);
-struct TreeNode* right = lowestCommonAncestor(root->right, p, q);
-   if (left != NULL && right != NULL) {
-        return root; 
+    if(p->val>root->val&&q->val>root->val){
+struct TreeNode*right=lowestCommonAncestor(root->right,p,q);
+return right;
     }
-    
-    
-    if (left == NULL) {
-        return right;
+    if(p->val<root->val&&q->val<root->val){
+         struct TreeNode*left=lowestCommonAncestor(root->left,p,q);
+         return left;
     }
-    
-    
-    return left;
+return root;
+   
 }
