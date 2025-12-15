@@ -9,8 +9,8 @@ typedef struct TreeNode {
 
 int maxDepth(struct TreeNode* root) {
     if(root==NULL)return 0;
-
-    int leftDepth =maxDepth(root->left);
-    int rightDepth =maxDepth(root->right);
-return (leftDepth>rightDepth?leftDepth:rightDepth)+1;
+    int left=maxDepth(root->left);
+    int right=maxDepth(root->right);
+    return (left> right?left:right)+1;
 }
+   
