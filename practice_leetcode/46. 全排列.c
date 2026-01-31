@@ -32,6 +32,7 @@ void backtrack(int count) {
 
         g_used[i] = 1;
         g_path[count] = g_nums[i];
+        
 
      
         backtrack(count + 1);
