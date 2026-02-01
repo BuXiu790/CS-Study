@@ -1,0 +1,23 @@
+#include<iostream>
+#include<vector>
+#include<map>
+using namespace std;
+class Solution {
+public:
+    vector<int> twoSum(vector<int>& nums, int target) {
+        map<int,int> mp;
+       for(int i=0;i<nums.size();i++){
+        int x=nums[i];
+        int need=target-nums[i];
+        if(mp.count(need)){
+           return{mp[need],i};
+         
+        }
+        mp[x]=i;
+
+       }
+       return {};
+
+
+    }
+};
