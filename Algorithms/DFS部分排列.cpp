@@ -1,7 +1,9 @@
 #include<iostream>
-//全排列（3 个盒子，3 张牌）
+
 using namespace std;
-int n=3;
+//从n个数里选出m个全排列 
+int n=5;
+int m=3;
 	int book[100]; 
 	int a[100];
 
@@ -9,8 +11,8 @@ int n=3;
 	
 void dfs(int step){
 //截至条件
-if(step==n+1) {
-	for(int i=1;i<=n;i++){
+if(step==m+1) {
+	for(int i=1;i<=m;i++){
 		cout<<a[i];
 		
 	
@@ -32,5 +34,4 @@ for(int i =1;i<=n;i++){
  }
  int main(){
  	dfs(1);
-    return 0;
  }
