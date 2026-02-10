@@ -27,9 +27,9 @@ void dfs(int r, int c, int step){
 		int nr=r+next[i][0];
 		int nc=c+next[i][1];
 	
-	if (nr >= 1 && nr <= n && nc >= 1 && nc <=m){
+		if (nr >= 1 && nr <= n && nc >= 1 && nc <=m){
 		
-		if(map[nr][nc] == 0 && book[nr][nc]==0){
+			if(map[nr][nc] == 0 && book[nr][nc]==0){
 			book[nr][nc] =1;
 			dfs(nr,nc,step+1);
 			book[nr][nc]=0;
