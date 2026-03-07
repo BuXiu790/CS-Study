@@ -17,25 +17,28 @@ public:
 		for(int i = 0; i < n; i++)
        {
        	if(mp[nums[i]]==0){
+			//判断mp里没有，再存入
        		unique_nums.push_back(nums[i]);
 		   }
 		   mp[nums[i]]++;
 	   }
       AA(0);
+	  //dfs
       return v2;
    
 }
 
 void AA(int k){
+	//截止条件
 	if(k >= n){
 		v2.push_back(v);
 		return;
 	}
-	
+
 	for(int i = 0; i < unique_nums.size(); i++){
 		int current_num = unique_nums[i] ;
 		
-	
+	//book用来记录某数字在选入的数中存在了几个
 	if(book[current_num] >= mp[current_num]){
 		continue;
 	}

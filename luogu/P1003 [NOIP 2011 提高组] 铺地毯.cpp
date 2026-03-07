@@ -9,9 +9,11 @@ int main(){
 	
 	 for(int i=1;i<=n;i++){
 	 	 cin>>a[i]>>b[i]>>g[i]>>k[i];
+		 //a,b分别是左下角x,y坐标
+		 //g,k分别为在x方向y方向的长度
 	 }
 	 int x,y;
-	 cin>>x>>y;
+	 cin>>x>>y;//所求点
 	 for(int i=n;i>=0;i--){
 	 	if(i==0){
 			cout<<-1;
