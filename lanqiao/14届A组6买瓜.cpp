@@ -34,15 +34,8 @@ void dfs(ll a,ll u){
     dfs(a,i+1);
     a-=B[i];
     ans--;
-
   }
-
-
-
 }
-
-
-
 int main()
 {
   
